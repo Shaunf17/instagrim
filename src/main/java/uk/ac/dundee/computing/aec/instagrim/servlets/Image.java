@@ -130,7 +130,8 @@ public class Image extends HttpServlet {
             System.out.println("Part Name " + part.getName());
 
             String type = part.getContentType();
-            String filename = part.getSubmittedFileName();
+            //String filename = part.getSubmittedFileName();
+            String filename = part.getName(); //.getSubmittedFileName SHOULD HAVE BEEN THE String filename BUT IT BROKE THE SERVER SO THIS IS A HOTFIX
             
             
             InputStream is = request.getPart(part.getName()).getInputStream();
@@ -155,6 +156,10 @@ public class Image extends HttpServlet {
              rd.forward(request, response);
         }
 
+    }
+    
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("The delete method is working");
     }
 
     private void error(String mess, HttpServletResponse response) throws ServletException, IOException {

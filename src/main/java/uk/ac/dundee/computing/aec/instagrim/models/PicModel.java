@@ -86,6 +86,20 @@ public class PicModel {
             System.out.println("Error --> " + ex);
         }
     }
+    
+    public void deletePic(String pic) {
+        
+        //Query
+        String query = "Drop KEYSPACE " + pic;
+        
+        //Creating session object
+        Session session = cluster.connect("Instagrim");
+        
+        //Executing the query
+        session.execute(query);
+        System.out.println("Keyspace Deleted");
+        
+    }
 
     public byte[] picresize(String picid,String type) {
         try {

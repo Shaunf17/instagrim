@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<root>
+    <web-app>
+
+       <context-param> 
+        <description>Location to store uploaded file</description> 
+        <param-name>file-upload</param-name> 
+        <param-value>
+             c:\apache-tomcat-7.0.72\webapps\data\
+         </param-value> 
+        </context-param>
+    
+    </web-app>
+</root>

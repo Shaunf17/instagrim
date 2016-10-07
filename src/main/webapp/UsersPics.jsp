@@ -7,13 +7,21 @@
 <%@page import="java.util.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import="uk.ac.dundee.computing.aec.instagrim.stores.*" %>
+<%@ page import="uk.ac.dundee.computing.aec.instagrim.models.*" %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Instagrim</title>
         <link rel="stylesheet" type="text/css" href="/Instagrim/Styles.css" />
+        
+        <script>
+            function myFunction() {
+            }
+        </script>
+        
     </head>
+    
     <body>
         <header>
         
@@ -43,11 +51,22 @@
                 Pic p = (Pic) iterator.next();
 
         %>
-        <a href="/Instagrim/Image/<%=p.getSUUID()%>" ><img src="/Instagrim/Thumb/<%=p.getSUUID()%>"></a><br/><%
+        <a href="/Instagrim/Image/<%=p.getSUUID()%>" ><img src="/Instagrim/Thumb/<%=p.getSUUID()%>"></a>
+        <br>
+        
+        <!--<input type="button" value="Delete" onClick="myFunction()">-->
+        <form method="DELETE" enctype="multipart/form-data" action="Image">
+                <input type="submit" value="Delete">
+            </form>
+        <br>
+        <br>
+        
+        <br/><%
 
             }
             }
         %>
+        
         </article>
         <footer>
             <ul>
