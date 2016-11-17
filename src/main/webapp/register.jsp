@@ -5,18 +5,12 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="head.jsp" %>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Instagrim</title>
-        <link rel="stylesheet" type="text/css" href="Styles.css" />
-    </head>
+    
     <body>
-        <header>
-        <h1>InstaGrim ! </h1>
-        <h2>Your world in Black and White</h2>
-        </header>
+       <%@include file="header.jsp" %>
         <nav>
             <ul>
                 
